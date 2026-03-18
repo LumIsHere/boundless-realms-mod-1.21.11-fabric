@@ -22,12 +22,15 @@ public class ModItems {
 
     public static final Item ANGLERFISH_MASK = registerItem("anglerfish_mask",
             new AnglerfishMaskItem(new Item.Settings()
-                    .maxCount(1)
-                    .component(DataComponentTypes.EQUIPPABLE, EquippableComponent.builder(EquipmentSlot.HEAD)
-                            .equipSound(SoundEvents.ITEM_ARMOR_EQUIP_LEATHER) // Optional sound
-                            .build())
+                    .maxCount(1).component(DataComponentTypes.EQUIPPABLE, EquippableComponent.builder(EquipmentSlot.HEAD).equipSound(SoundEvents.ITEM_ARMOR_EQUIP_LEATHER).build())
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(BoundlessRealmsMod.MOD_ID, "anglerfish_mask")))
             ));
+
+    public static final Item PORTABLE_CRAFTING_TABLE = registerItem("portable_crafting_table",
+            new PortableCraftingTableItem(new Item.Settings().maxCount(1).registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(BoundlessRealmsMod.MOD_ID, "portable_crafting_table")))));
+
+
+
     // Register items above
 
     private static Item registerItem(String name, Item item) {

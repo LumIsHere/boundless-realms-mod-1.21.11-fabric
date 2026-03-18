@@ -20,6 +20,7 @@ public class ModItemGroups {
                         entries.add(ModItems.WITHER_FURY);
                         entries.add(ModItems.BACKSTAB_TOTEM);
                         entries.add(ModItems.ANGLERFISH_MASK);
+                        entries.add(ModItems.PORTABLE_CRAFTING_TABLE);
                     })
                     .build());
 
