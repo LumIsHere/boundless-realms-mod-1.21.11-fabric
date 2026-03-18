@@ -31,10 +31,8 @@ public class BackstabTotemItem extends Item {
 
             if (target != null) {
 
-                // Get target yaw (horizontal rotation)
                 float yaw = target.getYaw();
 
-                // Convert yaw to radians
                 double radians = Math.toRadians(yaw);
 
                 // पीछे direction (behind player)

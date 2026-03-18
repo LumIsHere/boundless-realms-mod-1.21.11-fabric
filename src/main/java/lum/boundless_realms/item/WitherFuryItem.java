@@ -38,13 +38,11 @@ public class WitherFuryItem extends Item {
 
             Vec3d spawnPos = new Vec3d(targetPos.x, targetPos.y + SKULL_HEIGHT_OFFSET, targetPos.z);
 
-            // Create the wither skull entity
             WitherSkullEntity witherSkull = new WitherSkullEntity(EntityType.WITHER_SKULL, world);
             witherSkull.setOwner(user); // link skull to player
             witherSkull.setPos(spawnPos.x, spawnPos.y, spawnPos.z);
 
-            // Set velocity from spawn to target
-            Vec3d velocity = targetPos.subtract(spawnPos).normalize().multiply(2.5); // faster speed
+            Vec3d velocity = targetPos.subtract(spawnPos).normalize().multiply(4); // Speed of wither skull
             witherSkull.setVelocity(velocity);
 
             witherSkull.setCharged(true);
