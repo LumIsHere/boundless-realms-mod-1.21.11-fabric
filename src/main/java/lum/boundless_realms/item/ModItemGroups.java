@@ -19,6 +19,7 @@ public class ModItemGroups {
                         entries.add(ModItems.TAIGA_ONE_SURVIVAL_MACHETE);
                         entries.add(ModItems.WITHER_FURY);
                         entries.add(ModItems.BACKSTAB_TOTEM);
+                        entries.add(ModItems.ANGLERFISH_MASK);
                     })
                     .build());
 
