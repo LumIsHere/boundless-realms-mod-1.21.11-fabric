@@ -1,0 +1,28 @@
+package lum.boundless_realms.item;
+
+import lum.boundless_realms.BoundlessRealmsMod;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
+
+public class ModItemGroups {
+    public static final ItemGroup BOUNDLESS_REALMS_GENERAL_GROUP = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(BoundlessRealmsMod.MOD_ID, "boundless_realms_general"),
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.AN_ITEM))
+                    .displayName(Text.translatable("itemgroup.boundless_realms.boundless_realms_general"))
+                    .entries((displayContext, entries) -> {
+                        entries.add(ModItems.AN_ITEM);
+                        entries.add(ModItems.TAIGA_ONE_SURVIVAL_MACHETE);
+                        entries.add(ModItems.WITHER_FURY);
+                        entries.add(ModItems.BACKSTAB_TOTEM);
+                    })
+                    .build());
+
+    public static void registerItemGroups() {
+        BoundlessRealmsMod.LOGGER.info("Registering item groups for " + BoundlessRealmsMod.MOD_ID);
+    }
+}
