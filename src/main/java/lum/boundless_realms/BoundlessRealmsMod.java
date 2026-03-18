@@ -15,7 +15,5 @@ public class BoundlessRealmsMod implements ModInitializer {
 	public void onInitialize() {
         ModItems.registerModItems();
         ModItemGroups.registerItemGroups();
-
-        LOGGER.info("Holly is GAY :))))))))))");
 	}
 }
