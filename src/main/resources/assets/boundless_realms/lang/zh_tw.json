@@ -1,0 +1,10 @@
+{
+  "item.boundless_realms.taiga_1_survival_machete": "Taiga 1 Survival Machete",
+  "item.boundless_realms.wither_fury": "凋零之怒",
+  "item.boundless_realms.backstab_totem": "背刺圖騰",
+  "itemgroup.boundless_realms.boundless_realms_general": "Boundless Realms綜合",
+
+
+  "notification_no_target_backstab_totem": "5000格範圍內沒找到玩家",
+  "teleported_to_target_backstab_totem": "傳送至%s背後"
+}
