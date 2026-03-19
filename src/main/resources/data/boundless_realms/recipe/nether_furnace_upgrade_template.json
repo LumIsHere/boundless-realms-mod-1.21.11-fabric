@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "nnn",
+    "nNn",
+    "nnn"
+  ],
+  "key": {
+    "N": {
+      "item": "minecraft:nether_star"
+    },
+    "n": {
+      "item": "minecraft:netherrack"
+    }
+  },
+  "result": {
+    "id": "boundless_realms:nether_furnace_upgrade_template",
+    "count": 1
+  }
+}
