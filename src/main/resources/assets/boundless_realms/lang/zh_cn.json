@@ -1,10 +1,15 @@
 {
-  "item.boundless_realms.taiga_1_survival_machete": "Taiga 1 Survival Machete",
+  "item.boundless_realms.taiga_1_survival_machete": "Taiga 1 生存砍刀",
   "item.boundless_realms.wither_fury": "凋零之怒",
   "item.boundless_realms.backstab_totem": "背刺图腾",
   "item.boundless_realms.anglerfish_mask": "鮟鱇鱼面具",
   "item.boundless_realms.portable_crafting_table": "便携式工作台",
-  "itemgroup.boundless_realms.boundless_realms_general": "Boundless Realms一般",
-  "notification_no_target_backstab_totem": "无法在5000格内找到任何玩家",
-  "teleported_to_target_backstab_totem": "已传送到%s背后"
+  "itemgroup.boundless_realms.boundless_realms_general": "Boundless Realms",
+
+  "notification_no_target_backstab_totem": "5000格范围内未找到玩家",
+  "teleported_to_target_backstab_totem": "已传送至%s背后",
+
+  "item.boundless_realms.money": "金币",
+  "not_enough_money": "金币不足",
+  "spent_money": "消耗了 %s 金币"
 }
