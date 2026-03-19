@@ -5,11 +5,11 @@
   "item.boundless_realms.anglerfish_mask": "Anglerfish Mask",
   "item.boundless_realms.portable_crafting_table": "Portable Crafting Table",
   "item.boundless_realms.lunch_ticket": "Lunch Ticket",
+  "item.boundless_realms.money": "Money",
 
   "itemgroup.boundless_realms.boundless_realms_general": "Boundless Realms General",
 
   "notification_no_target_backstab_totem": "Couldn't find any player within range of 5000 blocks",
-  "teleported_to_target_backstab_totem": "Teleported behind %s",
   "teleported_to_target_backstab_totem": "Teleported behind %s!",
   "not_enough_money": "Not enough money!",
   "spent_money": "Spent %s money."
