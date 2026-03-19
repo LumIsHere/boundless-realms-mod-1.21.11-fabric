@@ -50,15 +50,6 @@ public class LunchTicketItem extends Item {
         }
 
         if (!world.isClient()) {
-            int cost = 44;
-
-            int money = countMoney(player);
-            if (money < cost) {
-                player.sendMessage(Text.translatable("not_enough_money"), true);
-                return false;
-            }
-
-            removeMoney(player, cost);
 
             LunchTicketProjectileEntity projectile =
                     new LunchTicketProjectileEntity(ModEntities.LUNCH_TICKET_PROJECTILE, world);
@@ -76,7 +67,6 @@ public class LunchTicketItem extends Item {
 
             world.spawnEntity(projectile);
 
-            player.sendMessage(Text.translatable("spent_money", cost), true);
         }
 
         world.playSound(
