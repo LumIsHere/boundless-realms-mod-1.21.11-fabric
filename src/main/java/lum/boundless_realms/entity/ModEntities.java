@@ -1,6 +1,7 @@
 package lum.boundless_realms.entity;
 
 import lum.boundless_realms.BoundlessRealmsMod;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.registry.Registries;
@@ -31,7 +32,32 @@ public class ModEntities {
                             .build(LUNCH_TICKET_PROJECTILE_KEY)
             );
 
+    public static final Identifier FAKE_TICKET_INSPECTOR_ID =
+            Identifier.of(BoundlessRealmsMod.MOD_ID, "fake_ticket_inspector");
+
+    public static final RegistryKey<EntityType<?>> FAKE_TICKET_INSPECTOR_KEY =
+            RegistryKey.of(RegistryKeys.ENTITY_TYPE, FAKE_TICKET_INSPECTOR_ID);
+
+    public static final EntityType<FakeTicketInspectorEntity> FAKE_TICKET_INSPECTOR =
+            Registry.register(
+                    Registries.ENTITY_TYPE,
+                    FAKE_TICKET_INSPECTOR_ID,
+                    EntityType.Builder.<FakeTicketInspectorEntity>create(
+                                    FakeTicketInspectorEntity::new,
+                                    SpawnGroup.CREATURE
+                            )
+                            .dimensions(0.6F, 1.95F)
+                            .maxTrackingRange(8)
+                            .trackingTickInterval(2)
+                            .build(FAKE_TICKET_INSPECTOR_KEY)
+            );
+
     public static void registerModEntities() {
         BoundlessRealmsMod.LOGGER.info("Registering entities for " + BoundlessRealmsMod.MOD_ID);
+
+        FabricDefaultAttributeRegistry.register(
+                FAKE_TICKET_INSPECTOR,
+                FakeTicketInspectorEntity.createAttributes()
+        );
     }
 }

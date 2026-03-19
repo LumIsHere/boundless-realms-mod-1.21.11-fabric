@@ -12,5 +12,12 @@
   "notification_no_target_backstab_totem": "Couldn't find any player within range of 5000 blocks",
   "teleported_to_target_backstab_totem": "Teleported behind %s!",
   "not_enough_money": "Not enough money!",
-  "spent_money": "Spent %s money."
+  "spent_money": "Spent %s money.",
+  "entity.boundless_realms.fake_ticket_inspector": "Fake Ticket Inspector",
+
+  "dialogue.boundless_realms.inspector.question": "Is this a fake ticket?",
+  "dialogue.boundless_realms.inspector.answer_no": "[No]",
+  "dialogue.boundless_realms.inspector.thinking": "Hmm...",
+  "dialogue.boundless_realms.inspector.return": "Seems real. Take it back.",
+  "dialogue.boundless_realms.inspector.no_ticket": "Hey, where is your lunch ticket?"
 }
