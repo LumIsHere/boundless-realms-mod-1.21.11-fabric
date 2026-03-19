@@ -11,5 +11,12 @@
 
   "item.boundless_realms.money": "金幣",
   "not_enough_money": "金幣不足",
-  "spent_money": "消耗了 %s 金幣"
+  "spent_money": "消耗了 %s 金幣",
+  "entity.boundless_realms.fake_ticket_inspector": "假餐券檢查員",
+  "dialogue.boundless_realms.inspector.question": "這是假餐券嗎？",
+  "dialogue.boundless_realms.inspector.answer_no": "[不是]",
+  "dialogue.boundless_realms.inspector.thinking": "嗯……",
+  "dialogue.boundless_realms.inspector.return": "看起來是真的，還給你。",
+  "dialogue.boundless_realms.inspector.no_ticket": "你的餐券呢？"
+}
 }
