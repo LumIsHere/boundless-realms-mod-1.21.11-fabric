@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "boundless_realms:block/furnace_front_on",
+    "side": "boundless_realms:block/furnace_side",
+    "top": "boundless_realms:block/furnace_top"
+  }
+}

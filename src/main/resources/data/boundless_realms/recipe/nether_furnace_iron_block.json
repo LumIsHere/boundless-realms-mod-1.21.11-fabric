@@ -1,0 +1,10 @@
+{
+  "type": "boundless_realms:nether_smelting",
+  "category": "misc",
+  "ingredient": "minecraft:raw_iron_block",
+  "result": {
+    "id": "minecraft:iron_block"
+  },
+  "experience": 1,
+  "cookingtime": 100
+}
