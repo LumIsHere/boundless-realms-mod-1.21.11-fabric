@@ -7,6 +7,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.item.Item;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.world.World;
 
@@ -37,5 +38,14 @@ public class LunchTicketProjectileEntity extends ThrownItemEntity {
         }
 
         this.discard();
+    }
+    @Override
+    protected void onBlockHit(BlockHitResult blockHitResult) {
+        super.onBlockHit(blockHitResult);
+
+        // This removes the entity from the world immediately
+        if (!this.getEntityWorld().isClient()) {
+            this.discard();
+        }
     }
 }
