@@ -17,7 +17,7 @@ public class ModItems {
     public static final Item AN_ITEM = registerItem("an_item", new Item(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(BoundlessRealmsMod.MOD_ID,"an_item")))));
 
     public static final Item MONEY = registerItem("money",
-            new Item(new Item.Settings().registryKey(
+            new Item(new Item.Settings().maxCount(99).registryKey(
                     RegistryKey.of(RegistryKeys.ITEM, Identifier.of(BoundlessRealmsMod.MOD_ID, "money"))
             )));
 
