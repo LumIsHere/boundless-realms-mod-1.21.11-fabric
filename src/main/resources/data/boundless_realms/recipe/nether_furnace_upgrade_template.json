@@ -6,12 +6,12 @@
     "nnn"
   ],
   "key": {
-    "N": {
-      "item": "minecraft:nether_star"
-    },
-    "n": {
-      "item": "minecraft:netherrack"
-    }
+    "N": [
+      "minecraft:nether_star"
+    ],
+    "n": [
+      "minecraft:netherrack"
+    ]
   },
   "result": {
     "id": "boundless_realms:nether_furnace_upgrade_template",
