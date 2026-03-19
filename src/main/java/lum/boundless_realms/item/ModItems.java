@@ -16,7 +16,7 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
     public static final Item AN_ITEM = registerItem("an_item", new Item(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(BoundlessRealmsMod.MOD_ID,"an_item")))));
-    public static final Item LUNCH_TICKET = registerItem("lunch_ticket", new Item(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(BoundlessRealmsMod.MOD_ID, "lunch_ticket")))));
+    public static final Item LUNCH_TICKET = registerItem("lunch_ticket", new LunchTicketItem(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(BoundlessRealmsMod.MOD_ID, "lunch_ticket")))));
     public static final Item BACKSTAB_TOTEM = registerItem("backstab_totem", new BackstabTotemItem(new Item.Settings().maxCount(1).registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(BoundlessRealmsMod.MOD_ID, "backstab_totem")))));
     public static final Item WITHER_FURY = registerItem("wither_fury", new WitherFuryItem(new Item.Settings().maxCount(1).registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(BoundlessRealmsMod.MOD_ID, "wither_fury")))));
     public static final Item TAIGA_ONE_SURVIVAL_MACHETE = registerItem("taiga_1_survival_machete",
