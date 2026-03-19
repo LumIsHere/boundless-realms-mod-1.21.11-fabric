@@ -40,6 +40,9 @@ public class ModItems {
     public static final Item PORTABLE_CRAFTING_TABLE = registerItem("portable_crafting_table",
             new PortableCraftingTableItem(new Item.Settings().maxCount(1).registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(BoundlessRealmsMod.MOD_ID, "portable_crafting_table")))));
 
+    public static final Item NETHER_FURNACE_UPGRADE_TEMPLATE = registerItem("nether_furnace_upgrade_template", new Item(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(BoundlessRealmsMod.MOD_ID,"nether_furnace_upgrade_template")))));
+
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(BoundlessRealmsMod.MOD_ID, name), item);
     }
