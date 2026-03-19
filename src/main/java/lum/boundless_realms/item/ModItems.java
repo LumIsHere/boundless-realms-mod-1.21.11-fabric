@@ -22,7 +22,7 @@ public class ModItems {
             )));
 
     public static final Item LUNCH_TICKET = registerItem("lunch_ticket",
-            new LunchTicketItem(new Item.Settings().registryKey(
+            new LunchTicketItem(new Item.Settings().maxCount(1).registryKey(
                     RegistryKey.of(RegistryKeys.ITEM, Identifier.of(BoundlessRealmsMod.MOD_ID, "lunch_ticket"))
             )));
 
@@ -39,6 +39,9 @@ public class ModItems {
 
     public static final Item PORTABLE_CRAFTING_TABLE = registerItem("portable_crafting_table",
             new PortableCraftingTableItem(new Item.Settings().maxCount(1).registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(BoundlessRealmsMod.MOD_ID, "portable_crafting_table")))));
+
+    public static final Item WALLET = registerItem("wallet",
+            new WalletItem(new Item.Settings().maxCount(1).registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(BoundlessRealmsMod.MOD_ID,"wallet")))));
 
     public static final Item NETHER_FURNACE_UPGRADE_TEMPLATE = registerItem("nether_furnace_upgrade_template", new Item(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(BoundlessRealmsMod.MOD_ID,"nether_furnace_upgrade_template")))));
 
