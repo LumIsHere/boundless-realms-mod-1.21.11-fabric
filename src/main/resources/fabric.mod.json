@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "boundless_realms",
-	"version": "0.2.1",
+	"version": "${version}",
 	"name": "Boundless Realms Mod",
 	"description": "A mod that has infinite possibilities",
 	"authors": [
