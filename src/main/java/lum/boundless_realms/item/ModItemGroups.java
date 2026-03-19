@@ -15,7 +15,6 @@ public class ModItemGroups {
             FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.AN_ITEM))
                     .displayName(Text.translatable("itemgroup.boundless_realms.boundless_realms_general"))
                     .entries((displayContext, entries) -> {
-                        entries.add(ModItems.AN_ITEM);
                         entries.add(ModItems.MONEY);
                         entries.add(ModItems.TAIGA_ONE_SURVIVAL_MACHETE);
                         entries.add(ModItems.WITHER_FURY);
