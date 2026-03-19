@@ -5,7 +5,6 @@ import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.EquippableComponent;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -16,7 +15,17 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
     public static final Item AN_ITEM = registerItem("an_item", new Item(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(BoundlessRealmsMod.MOD_ID,"an_item")))));
-    public static final Item LUNCH_TICKET = registerItem("lunch_ticket", new LunchTicketItem(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(BoundlessRealmsMod.MOD_ID, "lunch_ticket")))));
+
+    public static final Item MONEY = registerItem("money",
+            new Item(new Item.Settings().registryKey(
+                    RegistryKey.of(RegistryKeys.ITEM, Identifier.of(BoundlessRealmsMod.MOD_ID, "money"))
+            )));
+
+    public static final Item LUNCH_TICKET = registerItem("lunch_ticket",
+            new LunchTicketItem(new Item.Settings().registryKey(
+                    RegistryKey.of(RegistryKeys.ITEM, Identifier.of(BoundlessRealmsMod.MOD_ID, "lunch_ticket"))
+            )));
+
     public static final Item BACKSTAB_TOTEM = registerItem("backstab_totem", new BackstabTotemItem(new Item.Settings().maxCount(1).registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(BoundlessRealmsMod.MOD_ID, "backstab_totem")))));
     public static final Item WITHER_FURY = registerItem("wither_fury", new WitherFuryItem(new Item.Settings().maxCount(1).registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(BoundlessRealmsMod.MOD_ID, "wither_fury")))));
     public static final Item TAIGA_ONE_SURVIVAL_MACHETE = registerItem("taiga_1_survival_machete",
@@ -30,10 +39,6 @@ public class ModItems {
 
     public static final Item PORTABLE_CRAFTING_TABLE = registerItem("portable_crafting_table",
             new PortableCraftingTableItem(new Item.Settings().maxCount(1).registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(BoundlessRealmsMod.MOD_ID, "portable_crafting_table")))));
-
-
-
-    // Register items above
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(BoundlessRealmsMod.MOD_ID, name), item);

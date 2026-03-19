@@ -1,29 +1,23 @@
 package lum.boundless_realms.item;
 
-import lum.boundless_realms.entity.LunchTicketEntity;
+import lum.boundless_realms.entity.LunchTicketProjectileEntity;
+import lum.boundless_realms.entity.ModEntities;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.consume.UseAction;
-import net.minecraft.util.Hand;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 
 public class LunchTicketItem extends Item {
+
     public LunchTicketItem(Settings settings) {
         super(settings);
-    }
-
-    // Make it behave like a bow (pulling animation)
-    @Override
-    public UseAction getUseAction(ItemStack stack) {
-        return UseAction.BOW;
-    }
-
-    @Override
-    public int getMaxUseTime(ItemStack stack, LivingEntity user) {
-        return 72000; // Standard bow duration
     }
 
     @Override
@@ -33,34 +27,110 @@ public class LunchTicketItem extends Item {
     }
 
     @Override
-    public boolean onStoppedUsing(ItemStack stack, World world, LivingEntity user, int remainingUseTicks) {
-        if (user instanceof PlayerEntity player) {
-            int i = this.getMaxUseTime(stack, user) - remainingUseTicks;
-            float pullProgress = getPullProgress(i);
-
-            if (pullProgress >= 0.1f) {
-                if (!world.isClient()) {
-                    LunchTicketEntity ticket = new LunchTicketEntity(world, player);
-                    ticket.setItem(stack);
-                    ticket.setVelocity(player, player.getPitch(), player.getYaw(), 0.0F, pullProgress * 3.0F, 1.0F);
-                    world.spawnEntity(ticket);
-                }
-
-                if (!player.getAbilities().creativeMode) {
-                    stack.decrement(1);
-                }
-            }
-        }
-
-        return true; // ✅ REQUIRED in 1.21+
+    public int getMaxUseTime(ItemStack stack, LivingEntity user) {
+        return 72000;
     }
 
-    public static float getPullProgress(int useTicks) {
-        float f = (float)useTicks / 20.0F; // 20 ticks (1 second) for full power
+    @Override
+    public UseAction getUseAction(ItemStack stack) {
+        return UseAction.BOW;
+    }
+
+    @Override
+    public boolean onStoppedUsing(ItemStack stack, World world, LivingEntity user, int remainingUseTicks) {
+        if (!(user instanceof PlayerEntity player)) {
+            return false;
+        }
+
+        int useTicks = this.getMaxUseTime(stack, user) - remainingUseTicks;
+        float power = getPullProgress(useTicks);
+
+        if (power < 0.1F) {
+            return false;
+        }
+
+        if (!world.isClient()) {
+            int cost = 44;
+
+            int money = countMoney(player);
+            if (money < cost) {
+                player.sendMessage(Text.translatable("not_enough_money"), true);
+                return false;
+            }
+
+            removeMoney(player, cost);
+
+            LunchTicketProjectileEntity projectile =
+                    new LunchTicketProjectileEntity(ModEntities.LUNCH_TICKET_PROJECTILE, world);
+
+            projectile.setOwner(player);
+            projectile.setPosition(player.getX(), player.getEyeY() - 0.1, player.getZ());
+            projectile.setVelocity(
+                    player,
+                    player.getPitch(),
+                    player.getYaw(),
+                    0.0F,
+                    power * 3.0F,
+                    1.0F
+            );
+
+            world.spawnEntity(projectile);
+
+            player.sendMessage(Text.translatable("spent_money", cost), true);
+        }
+
+        world.playSound(
+                null,
+                player.getX(),
+                player.getY(),
+                player.getZ(),
+                SoundEvents.ENTITY_SNOWBALL_THROW,
+                SoundCategory.PLAYERS,
+                0.5F,
+                1.0F
+        );
+
+        return true;
+    }
+
+    private static float getPullProgress(int useTicks) {
+        float f = (float) useTicks / 20.0F;
         f = (f * f + f * 2.0F) / 3.0F;
+
         if (f > 1.0F) {
             f = 1.0F;
         }
+
         return f;
+    }
+
+    private int countMoney(PlayerEntity player) {
+        int total = 0;
+
+        for (int i = 0; i < player.getInventory().size(); i++) {
+            ItemStack stack = player.getInventory().getStack(i);
+
+            if (stack.getItem() == ModItems.MONEY) {
+                total += stack.getCount();
+            }
+        }
+
+        return total;
+    }
+
+    private void removeMoney(PlayerEntity player, int amount) {
+        for (int i = 0; i < player.getInventory().size(); i++) {
+            ItemStack stack = player.getInventory().getStack(i);
+
+            if (stack.getItem() == ModItems.MONEY) {
+                int remove = Math.min(amount, stack.getCount());
+                stack.decrement(remove);
+                amount -= remove;
+
+                if (amount <= 0) {
+                    break;
+                }
+            }
+        }
     }
 }
