@@ -21,6 +21,7 @@ public class ModItemGroups {
                         entries.add(ModItems.BACKSTAB_TOTEM);
                         entries.add(ModItems.ANGLERFISH_MASK);
                         entries.add(ModItems.PORTABLE_CRAFTING_TABLE);
+                        entries.add(ModItems.LUNCH_TICKET);
                     })
                     .build());
 
