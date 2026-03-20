@@ -76,7 +76,7 @@ public class WitherFuryItem extends Item {
 
             witherSkull.setOwner(user);
             witherSkull.setPos(spawnPos.x, spawnPos.y, spawnPos.z);
-            witherSkull.setVelocity(targetPos.subtract(spawnPos).normalize().multiply(4));
+            witherSkull.setVelocity(targetPos.subtract(spawnPos).normalize().multiply(3));
             witherSkull.setCharged(true);
             world.spawnEntity(witherSkull);
             world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_WITHER_SHOOT, SoundCategory.PLAYERS, 1.0f, 1.0f);
