@@ -30,6 +30,8 @@ public class ModItems {
 
     public static final Item AN_ITEM = registerItem("an_item", Item::new, new Item.Settings());
 
+    public static final Item FAKE_LUNCH_TICKET = registerItem("fake_lunch_ticket", Item::new, new Item.Settings().maxCount(1));
+
     public static final Item MONEY = registerItem("money", Item::new, new Item.Settings().maxCount(99));
 
     public static final Item LUNCH_TICKET = registerItem("lunch_ticket", LunchTicketItem::new,

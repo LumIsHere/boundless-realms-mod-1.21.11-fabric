@@ -23,6 +23,7 @@ public class ModItemGroups {
                         entries.add(ModItems.ANGLERFISH_MASK);
                         entries.add(ModItems.PORTABLE_CRAFTING_TABLE);
                         entries.add(ModItems.LUNCH_TICKET);
+                        entries.add(ModItems.FAKE_LUNCH_TICKET);
                         entries.add(ModItems.NETHER_FURNACE_UPGRADE_TEMPLATE);
                         entries.add(ModItems.WALLET);
                         entries.add(ModBlocks.NETHER_FURNACE);
