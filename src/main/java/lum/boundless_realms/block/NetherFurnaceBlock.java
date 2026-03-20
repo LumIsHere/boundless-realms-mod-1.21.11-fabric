@@ -31,9 +31,7 @@ public class NetherFurnaceBlock extends FurnaceBlock {
         } else {
             BlockEntity blockEntity = world.getBlockEntity(pos);
             if (blockEntity instanceof NetherFurnaceBlockEntity) {
-                // This is the magic line that opens the UI
                 player.openHandledScreen((NetherFurnaceBlockEntity)blockEntity);
-                // Optional: You can add a custom stat here
                 player.incrementStat(Stats.INTERACT_WITH_FURNACE);
             }
             return ActionResult.CONSUME;
@@ -43,7 +41,6 @@ public class NetherFurnaceBlock extends FurnaceBlock {
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
         return validateTicker(type, ModBlockEntities.NETHER_FURNACE_ENTITY, (world1, pos, state1, blockEntity) -> {
-            // DEBUG LINE: If this doesn't show up in your console, the ticker is NOT linked.
             if (world1.getTime() % 20 == 0) System.out.println("Nether Furnace is Ticking!");
 
             if (world1 instanceof ServerWorld serverWorld) {
