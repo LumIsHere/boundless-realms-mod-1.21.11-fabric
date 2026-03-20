@@ -31,10 +31,10 @@ public class ModItemGroups {
                     })
                     .build());
 
-    public static final ItemGroup BOUNDLESS_REALMS_MEDICAL_ITEMS_GROUP = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(BoundlessRealmsMod.MOD_ID, "boundless_realms_medical_items"),
+    public static final ItemGroup BOUNDLESS_REALMS_MEDICAL_SUPPLIES_GROUP = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(BoundlessRealmsMod.MOD_ID, "boundless_realms_medical_supplies"),
             FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.AFAK_MED_KIT))
-                    .displayName(Text.translatable("itemgroup.boundless_realms.boundless_realms_medical_items"))
+                    .displayName(Text.translatable("itemgroup.boundless_realms.boundless_realms_medical_supplies"))
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.AFAK_MED_KIT);
                     })

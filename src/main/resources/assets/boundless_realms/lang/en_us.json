@@ -20,7 +20,7 @@
   "notification.lunch_ticket.no_enough_money": "You need %s money to use it!",
 
   "itemgroup.boundless_realms.boundless_realms_general": "Boundless Realms",
-  "itemgroup.boundless_realms.boundless_realms_medical_items": "Medical Items",
+  "itemgroup.boundless_realms.boundless_realms_medical_supplies": "Medical Supplies",
 
   "notification_no_target_backstab_totem": "Couldn't find any player within range of 5000 blocks",
   "teleported_to_target_backstab_totem": "Teleported behind %s!",
