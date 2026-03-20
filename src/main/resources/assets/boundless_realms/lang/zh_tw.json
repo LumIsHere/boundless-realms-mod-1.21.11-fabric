@@ -17,11 +17,16 @@
   "teleported_to_target_backstab_totem": "已傳送到 %s 背後！",
   "not_enough_money": "金錢不足！",
   "spent_money": "花費了 %s 金錢。",
+  "death.too_honest": "你因為太誠實而被殺死了",
+  "death.attack.too_honest": "你因為太誠實而被殺死了",
   "entity.boundless_realms.fake_ticket_inspector": "假檢票員",
 
   "dialogue.boundless_realms.inspector.question": "這是張假票嗎？",
+  "dialogue.boundless_realms.inspector.answer_yes": "[是]",
   "dialogue.boundless_realms.inspector.answer_no": "[不是]",
+  "dialogue.boundless_realms.inspector.honest": "真是個誠實的孩子。",
   "dialogue.boundless_realms.inspector.thinking": "嗯...",
   "dialogue.boundless_realms.inspector.return": "看起來是真的。拿回去吧。",
+  "dialogue.boundless_realms.inspector.fake": "這是假票。你的血量被扣到只剩半顆心。",
   "dialogue.boundless_realms.inspector.no_ticket": "嘿，你的午餐券在哪裡？"
 }

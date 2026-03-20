@@ -14,6 +14,24 @@ public class InspectorAnswerCommand {
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher) {
         dispatcher.register(
                 literal("inspector_answer")
+                        .then(literal("yes")
+                                .executes(context -> {
+                                    ServerPlayerEntity player = context.getSource().getPlayerOrThrow();
+
+                                    List<FakeTicketInspectorEntity> inspectors =
+                                            player.getEntityWorld().getEntitiesByClass(
+                                                    FakeTicketInspectorEntity.class,
+                                                    player.getBoundingBox().expand(12.0),
+                                                    inspector -> inspector.isWaitingFor(player)
+                                            );
+
+                                    if (!inspectors.isEmpty()) {
+                                        inspectors.get(0).onPlayerAnsweredYes(player);
+                                        return 1;
+                                    }
+
+                                    return 0;
+                                }))
                         .then(literal("no")
                                 .executes(context -> {
                                     ServerPlayerEntity player = context.getSource().getPlayerOrThrow();

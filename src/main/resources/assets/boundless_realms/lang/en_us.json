@@ -24,11 +24,16 @@
   "teleported_to_target_backstab_totem": "Teleported behind %s!",
   "not_enough_money": "Not enough money!",
   "spent_money": "Spent %s money.",
+  "death.too_honest": "You were killed for being honest",
+  "death.attack.too_honest": "You were killed for being honest",
   "entity.boundless_realms.fake_ticket_inspector": "Fake Ticket Inspector",
 
   "dialogue.boundless_realms.inspector.question": "Is this a fake ticket?",
+  "dialogue.boundless_realms.inspector.answer_yes": "[Yes]",
   "dialogue.boundless_realms.inspector.answer_no": "[No]",
+  "dialogue.boundless_realms.inspector.honest": "What an honest child.",
   "dialogue.boundless_realms.inspector.thinking": "Hmm...",
   "dialogue.boundless_realms.inspector.return": "Seems real. Take it back.",
+  "dialogue.boundless_realms.inspector.fake": "This is a fake ticket. Your health has been reduced to half a heart.",
   "dialogue.boundless_realms.inspector.no_ticket": "Hey, where is your lunch ticket?"
 }
