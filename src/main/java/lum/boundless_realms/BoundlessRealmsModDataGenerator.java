@@ -9,3 +9,4 @@ public class BoundlessRealmsModDataGenerator implements DataGeneratorEntrypoint 
 
 	}
 }
+

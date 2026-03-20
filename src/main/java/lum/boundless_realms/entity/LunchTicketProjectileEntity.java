@@ -49,3 +49,4 @@ public class LunchTicketProjectileEntity extends ThrownItemEntity {
         }
     }
 }
+

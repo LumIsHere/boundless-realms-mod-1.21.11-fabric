@@ -42,3 +42,4 @@ public class LunchTicketEntity extends ThrownItemEntity {
         }
     }
 }
+

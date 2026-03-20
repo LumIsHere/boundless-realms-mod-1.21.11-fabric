@@ -364,3 +364,4 @@ public class FakeTicketInspectorEntity extends VillagerEntity {
         return ItemStack.EMPTY;
     }
 }
+

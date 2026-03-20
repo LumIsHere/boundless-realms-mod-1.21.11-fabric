@@ -35,3 +35,4 @@ public class ModItemGroups {
         BoundlessRealmsMod.LOGGER.info("Registering item groups for " + BoundlessRealmsMod.MOD_ID);
     }
 }
+
