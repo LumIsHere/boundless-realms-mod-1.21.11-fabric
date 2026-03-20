@@ -1,7 +1,7 @@
 package lum.boundless_realms.command;
 
 import com.mojang.brigadier.CommandDispatcher;
-import lum.boundless_realms.entity.FakeTicketInspectorEntity;
+import lum.boundless_realms.entity.TicketInspectorEntity;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.network.ServerPlayerEntity;
 
@@ -18,9 +18,9 @@ public class InspectorAnswerCommand {
                                 .executes(context -> {
                                     ServerPlayerEntity player = context.getSource().getPlayerOrThrow();
 
-                                    List<FakeTicketInspectorEntity> inspectors =
+                                    List<TicketInspectorEntity> inspectors =
                                             player.getEntityWorld().getEntitiesByClass(
-                                                    FakeTicketInspectorEntity.class,
+                                                    TicketInspectorEntity.class,
                                                     player.getBoundingBox().expand(12.0),
                                                     inspector -> inspector.isWaitingFor(player)
                                             );
@@ -36,9 +36,9 @@ public class InspectorAnswerCommand {
                                 .executes(context -> {
                                     ServerPlayerEntity player = context.getSource().getPlayerOrThrow();
 
-                                    List<FakeTicketInspectorEntity> inspectors =
+                                    List<TicketInspectorEntity> inspectors =
                                             player.getEntityWorld().getEntitiesByClass(
-                                                    FakeTicketInspectorEntity.class,
+                                                    TicketInspectorEntity.class,
                                                     player.getBoundingBox().expand(12.0),
                                                     inspector -> inspector.isWaitingFor(player)
                                             );

@@ -14,7 +14,7 @@
   "item.boundless_realms.nether_furnace_upgrade_template": "Nether Furnace Upgrade Template",
   "item.boundless_realms.wallet": "Wallet",
   "item.boundless_realms.nether_furnace": "Nether Furnace",
-  "item.boundless_realms.fake_ticket_inspector_spawn_egg": "Fake Ticket Inspector Spawn Egg",
+  "item.boundless_realms.ticket_inspector_spawn_egg": "Ticket Inspector Spawn Egg",
 
   "notification.lunch_ticket.no_enough_money": "You need %s money to use it!",
 
@@ -26,7 +26,7 @@
   "spent_money": "Spent %s money.",
   "death.too_honest": "You were killed for being honest",
   "death.attack.too_honest": "You were killed for being honest",
-  "entity.boundless_realms.fake_ticket_inspector": "Fake Ticket Inspector",
+  "entity.boundless_realms.ticket_inspector": "Ticket Inspector",
 
   "dialogue.boundless_realms.inspector.question": "Is this a fake ticket?",
   "dialogue.boundless_realms.inspector.answer_yes": "[Yes]",

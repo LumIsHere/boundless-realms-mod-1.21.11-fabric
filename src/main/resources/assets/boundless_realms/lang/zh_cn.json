@@ -14,7 +14,7 @@
   "item.boundless_realms.nether_furnace_upgrade_template": "下界熔炉升级模板",
   "item.boundless_realms.wallet": "钱包",
   "item.boundless_realms.nether_furnace": "下界熔炉",
-  "item.boundless_realms.fake_ticket_inspector_spawn_egg": "假检票员刷怪蛋",
+  "item.boundless_realms.ticket_inspector_spawn_egg": "检票员刷怪蛋",
 
   "notification.lunch_ticket.no_enough_money": "你需要 %s 钱才能使用它！",
 
@@ -26,7 +26,7 @@
   "spent_money": "花费了 %s 钱。",
   "death.too_honest": "你因为太诚实而被杀死了",
   "death.attack.too_honest": "你因为太诚实而被杀死了",
-  "entity.boundless_realms.fake_ticket_inspector": "假检票员",
+  "entity.boundless_realms.ticket_inspector": "检票员",
 
   "dialogue.boundless_realms.inspector.question": "这是张假票吗？",
   "dialogue.boundless_realms.inspector.answer_yes": "[是]",

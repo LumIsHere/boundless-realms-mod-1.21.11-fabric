@@ -26,7 +26,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
-public class FakeTicketInspectorEntity extends VillagerEntity {
+public class TicketInspectorEntity extends VillagerEntity {
 
     private static final RegistryKey<DamageType> TOO_HONEST_DAMAGE_TYPE = RegistryKey.of(
             RegistryKeys.DAMAGE_TYPE,
@@ -49,7 +49,7 @@ public class FakeTicketInspectorEntity extends VillagerEntity {
     private boolean canTrigger = true;
     private int stateTimer = 0;
 
-    public FakeTicketInspectorEntity(EntityType<? extends VillagerEntity> entityType, World world) {
+    public TicketInspectorEntity(EntityType<? extends VillagerEntity> entityType, World world) {
         super(entityType, world);
     }
 

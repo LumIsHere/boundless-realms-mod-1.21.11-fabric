@@ -27,7 +27,7 @@ public class ModItemGroups {
                         entries.add(ModItems.NETHER_FURNACE_UPGRADE_TEMPLATE);
                         entries.add(ModItems.WALLET);
                         entries.add(ModBlocks.NETHER_FURNACE);
-                        entries.add(ModItems.FAKE_TICKET_INSPECTOR_SPAWN_EGG);
+                        entries.add(ModItems.TICKET_INSPECTOR_SPAWN_EGG);
                     })
                     .build());
 

@@ -15,7 +15,7 @@ public class BoundlessRealmsModClient implements ClientModInitializer {
         );
 
         EntityRendererRegistry.register(
-                ModEntities.FAKE_TICKET_INSPECTOR,
+                ModEntities.TICKET_INSPECTOR,
                 VillagerEntityRenderer::new
         );
     }
