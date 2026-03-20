@@ -17,35 +17,42 @@ import static net.minecraft.block.Blocks.createLightLevelFromLitBlockState;
 
 public class ModBlocks {
 
-    public static final Block A_BLOCK = registerBlock("a_block",
+    public static final Block A_BLOCK = register(
+            "a_block",
             Block::new,
-            AbstractBlock.Settings.create());
+            AbstractBlock.Settings.create(),
+            true
+    );
 
-    public static final Block NETHER_FURNACE = registerBlock("nether_furnace",
+    // 2. Nether Furnace with its custom class and an item
+    public static final Block NETHER_FURNACE = register(
+            "nether_furnace",
             NetherFurnaceBlock::new,
             AbstractBlock.Settings.create()
                     .mapColor(MapColor.BRIGHT_RED)
                     .requiresTool()
                     .strength(3.5F)
-                    .luminance(createLightLevelFromLitBlockState(15)));
+                    .luminance(state -> state.get(NetherFurnaceBlock.LIT) ? 15 : 0),
+            true
+    );
 
-    private static <T extends Block> T registerBlock(String name, Function<AbstractBlock.Settings, T> factory, AbstractBlock.Settings settings) {
-        RegistryKey<Block> blockKey = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(BoundlessRealmsMod.MOD_ID, name));
+    private static Block register(String name, Function<AbstractBlock.Settings, Block> blockFactory, AbstractBlock.Settings settings, boolean shouldRegisterItem) {
+        Identifier id = Identifier.of(BoundlessRealmsMod.MOD_ID, name);
 
-        T block = factory.apply(settings.registryKey(blockKey));
+        RegistryKey<Block> blockKey = RegistryKey.of(RegistryKeys.BLOCK, id);
+        RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, id);
 
-        registerBlockItem(name, block);
+        Block block = blockFactory.apply(settings.registryKey(blockKey));
+
+        if (shouldRegisterItem) {
+            BlockItem blockItem = new BlockItem(block, new Item.Settings().registryKey(itemKey));
+            Registry.register(Registries.ITEM, itemKey, blockItem);
+        }
 
         return Registry.register(Registries.BLOCK, blockKey, block);
     }
 
-    private static void registerBlockItem(String name, Block block) {
-        RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(BoundlessRealmsMod.MOD_ID, name));
-        Registry.register(Registries.ITEM, itemKey, new BlockItem(block, new Item.Settings().registryKey(itemKey)));
-    }
-
     public static void registerModBlocks() {
-        net.minecraft.block.entity.BlockEntityType.FURNACE.addSupportedBlock(ModBlocks.NETHER_FURNACE);
-        BoundlessRealmsMod.LOGGER.info("Registering Mod Blocks for " + BoundlessRealmsMod.MOD_ID);
+        BoundlessRealmsMod.LOGGER.info("Registering blocks for " + BoundlessRealmsMod.MOD_ID);
     }
 }
