@@ -1,0 +1,41 @@
+{
+  "block.boundless_realms.nether_furnace": "Nether-Ofen",
+
+  "container.nether_furnace": "Nether-Ofen",
+
+  "item.boundless_realms.taiga_1_survival_machete": "Taiga-1-Überlebensmachete",
+  "item.boundless_realms.wither_fury": "Zorn des Withers",
+  "item.boundless_realms.backstab_totem": "Totem des Rückenstichs",
+  "item.boundless_realms.anglerfish_mask": "Anglerfischmaske",
+  "item.boundless_realms.portable_crafting_table": "Tragbare Werkbank",
+  "item.boundless_realms.lunch_ticket": "Essensmarke",
+  "item.boundless_realms.fake_lunch_ticket": "Gefälschte Essensmarke",
+  "item.boundless_realms.money": "Geld",
+  "item.boundless_realms.nether_furnace_upgrade_template": "Nether-Ofen-Aufwertungsschmiedevorlage",
+  "item.boundless_realms.wallet": "Brieftasche",
+  "item.boundless_realms.nether_furnace": "Nether-Ofen",
+  "item.boundless_realms.ticket_inspector_spawn_egg": "Spawn-Ei für Kontrolleur",
+
+  "notification.lunch_ticket.no_enough_money": "Du brauchst %s Geld, um das zu benutzen!",
+
+  "itemgroup.boundless_realms.boundless_realms_general": "Boundless Realms - Allgemein",
+
+  "notification_no_target_backstab_totem": "Kein Spieler im Umkreis von 5000 Blöcken gefunden",
+  "teleported_to_target_backstab_totem": "Hinter %s teleportiert!",
+  "not_enough_money": "Nicht genug Geld!",
+  "spent_money": "%s Geld ausgegeben.",
+  "death.too_honest": "Du wurdest getötet, weil du ehrlich warst",
+  "death.attack.too_honest": "Du wurdest getötet, weil du ehrlich warst",
+  "entity.boundless_realms.ticket_inspector": "Kontrolleur",
+
+  "dialogue.boundless_realms.inspector.question": "Ist das ein gefälschtes Ticket?",
+  "dialogue.boundless_realms.inspector.answer_yes": "[Ja]",
+  "dialogue.boundless_realms.inspector.answer_no": "[Nein]",
+  "dialogue.boundless_realms.inspector.honest": "Was für ein ehrliches Kind.",
+  "dialogue.boundless_realms.inspector.self_doubt": "Warte... habe ich mich geirrt? Lass mich kurz nachdenken.",
+  "dialogue.boundless_realms.inspector.thinking": "Hm...",
+  "dialogue.boundless_realms.inspector.return": "Sieht echt aus. Nimm es zurück.",
+  "dialogue.boundless_realms.inspector.fake": "Das ist ein gefälschtes Ticket. Deine Gesundheit wurde auf ein halbes Herz reduziert.",
+  "dialogue.boundless_realms.inspector.warning": "Dieses Mal beschlagnahme ich dein Ticket. Betrachte das als Warnung.",
+  "dialogue.boundless_realms.inspector.no_ticket": "Hey, wo ist deine Essensmarke?"
+}

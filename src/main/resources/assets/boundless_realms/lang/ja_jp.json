@@ -1,0 +1,41 @@
+{
+  "block.boundless_realms.nether_furnace": "ネザーかまど",
+
+  "container.nether_furnace": "ネザーかまど",
+
+  "item.boundless_realms.taiga_1_survival_machete": "Taiga-1 サバイバルマチェット",
+  "item.boundless_realms.wither_fury": "ウィザーの憤怒",
+  "item.boundless_realms.backstab_totem": "バックスタブのトーテム",
+  "item.boundless_realms.anglerfish_mask": "アンコウのマスク",
+  "item.boundless_realms.portable_crafting_table": "携帯用作業台",
+  "item.boundless_realms.lunch_ticket": "昼食券",
+  "item.boundless_realms.fake_lunch_ticket": "偽の昼食券",
+  "item.boundless_realms.money": "お金",
+  "item.boundless_realms.nether_furnace_upgrade_template": "ネザーかまどのアップグレード鍛冶型",
+  "item.boundless_realms.wallet": "財布",
+  "item.boundless_realms.nether_furnace": "ネザーかまど",
+  "item.boundless_realms.ticket_inspector_spawn_egg": "検札員のスポーンエッグ",
+
+  "notification.lunch_ticket.no_enough_money": "使うには %s お金必要です！",
+
+  "itemgroup.boundless_realms.boundless_realms_general": "Boundless Realms - 一般",
+
+  "notification_no_target_backstab_totem": "5000ブロック以内にプレイヤーが見つかりません",
+  "teleported_to_target_backstab_totem": "%s の背後にテレポートしました！",
+  "not_enough_money": "お金が足りません！",
+  "spent_money": "%s お金を消費しました。",
+  "death.too_honest": "正直すぎたために殺された",
+  "death.attack.too_honest": "正直すぎたために殺された",
+  "entity.boundless_realms.ticket_inspector": "検札員",
+
+  "dialogue.boundless_realms.inspector.question": "これは偽の券ですか？",
+  "dialogue.boundless_realms.inspector.answer_yes": "[はい]",
+  "dialogue.boundless_realms.inspector.answer_no": "[いいえ]",
+  "dialogue.boundless_realms.inspector.honest": "なんて正直な子なんだ。",
+  "dialogue.boundless_realms.inspector.self_doubt": "待てよ……私の見間違いだったのか？ もう少し考えよう。",
+  "dialogue.boundless_realms.inspector.thinking": "うーん……",
+  "dialogue.boundless_realms.inspector.return": "本物のようだ。返しておこう。",
+  "dialogue.boundless_realms.inspector.fake": "これは偽の券だ。体力を半ハートまで減らした。",
+  "dialogue.boundless_realms.inspector.warning": "今回は券を没収する。警告だけで済ませてやろう。",
+  "dialogue.boundless_realms.inspector.no_ticket": "おい、昼食券はどこだ？"
+}
