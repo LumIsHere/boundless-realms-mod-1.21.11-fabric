@@ -26,7 +26,7 @@ public class LunchTicketItem extends Item {
 
     @Override
     public ActionResult use(World world, PlayerEntity user, Hand hand) {
-        if (countTotalMoney(user) < COST) {
+        if (!user.getAbilities().creativeMode && countTotalMoney(user) < COST) {
             if (!world.isClient()) {
                 user.sendMessage(Text.translatable("notification.lunch_ticket.no_enough_money", COST), true);
             }
@@ -45,12 +45,16 @@ public class LunchTicketItem extends Item {
 
         if (power < 0.1F) return false;
 
-        if (countTotalMoney(player) < COST) {
+        boolean isCreative = player.getAbilities().creativeMode;
+
+        if (!isCreative && countTotalMoney(player) < COST) {
             return false;
         }
 
         if (!world.isClient()) {
-            removeTotalMoney(player, COST);
+            if (!isCreative) {
+                removeTotalMoney(player, COST);
+            }
 
             LunchTicketProjectileEntity projectile = new LunchTicketProjectileEntity(ModEntities.LUNCH_TICKET_PROJECTILE, world);
             projectile.setOwner(player);
