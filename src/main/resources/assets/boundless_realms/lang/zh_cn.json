@@ -1,13 +1,20 @@
 {
+  "block.boundless_realms.nether_furnace": "下界熔炉",
+
+  "container.nether_furnace": "下界熔炉",
+
   "item.boundless_realms.taiga_1_survival_machete": "泰加1型生存大砍刀",
   "item.boundless_realms.wither_fury": "凋零之怒",
   "item.boundless_realms.backstab_totem": "背刺图腾",
   "item.boundless_realms.anglerfish_mask": "鮟鱇鱼面具",
   "item.boundless_realms.portable_crafting_table": "便携式工作台",
   "item.boundless_realms.lunch_ticket": "午餐券",
+  "item.boundless_realms.fake_lunch_ticket": "假午餐券",
   "item.boundless_realms.money": "钱",
   "item.boundless_realms.nether_furnace_upgrade_template": "下界熔炉升级模板",
   "item.boundless_realms.wallet": "钱包",
+  "item.boundless_realms.nether_furnace": "下界熔炉",
+  "item.boundless_realms.fake_ticket_inspector_spawn_egg": "假检票员刷怪蛋",
 
   "notification.lunch_ticket.no_enough_money": "你需要 %s 钱才能使用它！",
 
