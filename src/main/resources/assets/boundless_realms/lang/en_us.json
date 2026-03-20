@@ -12,6 +12,8 @@
   "item.boundless_realms.money": "Money",
   "item.boundless_realms.nether_furnace_upgrade_template": "Nether Furnace Upgrade Template",
   "item.boundless_realms.wallet": "Wallet",
+  "item.boundless_realms.nether_furnace": "Nether Furnace",
+  "item.boundless_realms.fake_ticket_inspector_spawn_egg": "Fake Ticket Inspector Spawn Egg",
 
   "notification.lunch_ticket.no_enough_money": "You need %s money to use it!",
 
