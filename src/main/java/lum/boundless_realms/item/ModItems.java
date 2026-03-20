@@ -1,16 +1,19 @@
 package lum.boundless_realms.item;
 
 import lum.boundless_realms.BoundlessRealmsMod;
+import lum.boundless_realms.entity.ModEntities;
 import net.minecraft.block.Blocks;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.AttributeModifierSlot;
 import net.minecraft.component.type.AttributeModifiersComponent;
 import net.minecraft.component.type.EquippableComponent;
 import net.minecraft.component.type.ToolComponent;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.Item;
+import net.minecraft.item.SpawnEggItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -59,6 +62,10 @@ public class ModItems {
     public static final Item NETHER_FURNACE_UPGRADE_TEMPLATE = registerItem("nether_furnace_upgrade_template", Item::new,
             new Item.Settings());
 
+    public static final Item FAKE_TICKET_INSPECTOR_SPAWN_EGG = registerItem("fake_ticket_inspector_spawn_egg", SpawnEggItem::new,
+            new Item.Settings().spawnEgg(ModEntities.FAKE_TICKET_INSPECTOR));
+
+
     private static AttributeModifiersComponent createSwordAttributes(double damage, double speed) {
         return AttributeModifiersComponent.builder()
                 .add(EntityAttributes.ATTACK_DAMAGE,
@@ -74,7 +81,7 @@ public class ModItems {
         return new ToolComponent(
                 List.of(
                         ToolComponent.Rule.of(
-                                RegistryEntryList.of(Blocks.COBWEB.getRegistryEntry()),
+                                RegistryEntryList.of(Registries.BLOCK.getEntry(Blocks.COBWEB)),
                                 15.0f
                         )
                 ),
