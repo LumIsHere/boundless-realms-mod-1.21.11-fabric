@@ -49,6 +49,11 @@ public class ModItems {
     public static final Item NETHER_FURNACE_UPGRADE_TEMPLATE = register("nether_furnace_upgrade_template", Item::new, new Item.Settings());
     public static final SpawnEggItem TICKET_INSPECTOR_SPAWN_EGG = register("ticket_inspector_spawn_egg", SpawnEggItem::new,
             new Item.Settings().spawnEgg(ModEntities.TICKET_INSPECTOR));
+    public static final Item AFAK_MED_KIT = register(
+            "afak_med_kit",
+            settings -> new MedKitItem(settings, 10.0f, 40),
+            new Item.Settings()
+    );
 
     public static <T extends Item> T register(String name, Function<Item.Settings, T> itemFactory, Item.Settings settings) {
         Identifier id = Identifier.of(BoundlessRealmsMod.MOD_ID, name);
