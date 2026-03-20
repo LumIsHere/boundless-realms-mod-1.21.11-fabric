@@ -62,6 +62,11 @@ public class WitherFuryItem extends Item {
                                 if (entity instanceof ItemEntity || entity instanceof ExperienceOrbEntity) return false;
                                 return !entity.equals(getOwner());
                             }
+
+                            @Override
+                            public float getKnockbackModifier(net.minecraft.entity.Entity entity) {
+                                return 0.0f;
+                            }
                         }, pos.x, pos.y, pos.z, radius, false, World.ExplosionSourceType.NONE);
 
                         this.discard();
