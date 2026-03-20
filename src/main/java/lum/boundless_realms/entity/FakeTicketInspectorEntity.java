@@ -217,15 +217,22 @@ public class FakeTicketInspectorEntity extends VillagerEntity {
             return;
         }
 
-        player.sendMessage(
-                Text.translatable("dialogue.boundless_realms.inspector.honest"),
-                false
-        );
+        if (stolenTicketIsFake) {
+            // CASE: Player lied about having a fake ticket (it actually IS fake) -> "Honest" death
+            player.sendMessage(Text.translatable("dialogue.boundless_realms.inspector.honest"), false);
 
-        if (player.getEntityWorld() instanceof ServerWorld serverWorld) {
-            player.damage(serverWorld, createTooHonestDamageSource(serverWorld), Float.MAX_VALUE);
+            if (player.getEntityWorld() instanceof ServerWorld serverWorld) {
+                player.damage(serverWorld, createTooHonestDamageSource(serverWorld), Float.MAX_VALUE);
+            }
+        } else {
+            // CASE: Player lied saying it's fake, but it's actually REAL -> "You kidding me?"
+            player.sendMessage(Text.translatable("dialogue.boundless_realms.inspector.kidding_me"), false);
+
+            // Return the real ticket because they weren't "too honest" to die
+            returnTicket();
         }
 
+        // Cleanup and move on
         stolenTicket = ItemStack.EMPTY;
         stolenTicketIsFake = false;
         beginLeaving();

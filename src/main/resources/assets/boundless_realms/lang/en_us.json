@@ -35,5 +35,6 @@
   "dialogue.boundless_realms.inspector.thinking": "Hmm...",
   "dialogue.boundless_realms.inspector.return": "Seems real. Take it back.",
   "dialogue.boundless_realms.inspector.fake": "This is a fake ticket. Your health has been reduced to half a heart.",
-  "dialogue.boundless_realms.inspector.no_ticket": "Hey, where is your lunch ticket?"
+  "dialogue.boundless_realms.inspector.no_ticket": "Hey, where is your lunch ticket?",
+  "dialogue.boundless_realms.inspector.kidding_me": "Are you kidding me? It's a real one!"
 }
