@@ -15,10 +15,12 @@
   "item.boundless_realms.wallet": "Wallet",
   "item.boundless_realms.nether_furnace": "Nether Furnace",
   "item.boundless_realms.ticket_inspector_spawn_egg": "Ticket Inspector Spawn Egg",
+  "item.boundless_realms.afak_med_kit": "AFAK Med Kit",
 
   "notification.lunch_ticket.no_enough_money": "You need %s money to use it!",
 
-  "itemgroup.boundless_realms.boundless_realms_general": "Boundless Realms General",
+  "itemgroup.boundless_realms.boundless_realms_general": "Boundless Realms",
+  "itemgroup.boundless_realms.boundless_realms_medical_items": "Medical Items",
 
   "notification_no_target_backstab_totem": "Couldn't find any player within range of 5000 blocks",
   "teleported_to_target_backstab_totem": "Teleported behind %s!",
