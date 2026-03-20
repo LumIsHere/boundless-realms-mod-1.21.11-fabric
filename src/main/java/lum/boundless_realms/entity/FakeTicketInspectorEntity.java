@@ -45,6 +45,7 @@ public class FakeTicketInspectorEntity extends VillagerEntity {
     private PlayerEntity targetPlayer;
     private ItemStack stolenTicket = ItemStack.EMPTY;
     private boolean stolenTicketIsFake = false;
+    private boolean playerClaimedRealTicketWasFake = false;
     private boolean canTrigger = true;
     private int stateTimer = 0;
 
@@ -203,6 +204,8 @@ public class FakeTicketInspectorEntity extends VillagerEntity {
             return;
         }
 
+        playerClaimedRealTicketWasFake = false;
+
         player.sendMessage(
                 Text.translatable("dialogue.boundless_realms.inspector.thinking"),
                 false
@@ -218,24 +221,26 @@ public class FakeTicketInspectorEntity extends VillagerEntity {
         }
 
         if (stolenTicketIsFake) {
-            // CASE: Player lied about having a fake ticket (it actually IS fake) -> "Honest" death
             player.sendMessage(Text.translatable("dialogue.boundless_realms.inspector.honest"), false);
 
             if (player.getEntityWorld() instanceof ServerWorld serverWorld) {
                 player.damage(serverWorld, createTooHonestDamageSource(serverWorld), Float.MAX_VALUE);
             }
-        } else {
-            // CASE: Player lied saying it's fake, but it's actually REAL -> "You kidding me?"
-            player.sendMessage(Text.translatable("dialogue.boundless_realms.inspector.kidding_me"), false);
 
-            // Return the real ticket because they weren't "too honest" to die
-            returnTicket();
+            stolenTicket = ItemStack.EMPTY;
+            stolenTicketIsFake = false;
+            playerClaimedRealTicketWasFake = false;
+            beginLeaving();
+            return;
         }
 
-        // Cleanup and move on
-        stolenTicket = ItemStack.EMPTY;
-        stolenTicketIsFake = false;
-        beginLeaving();
+        playerClaimedRealTicketWasFake = true;
+        player.sendMessage(
+                Text.translatable("dialogue.boundless_realms.inspector.self_doubt"),
+                false
+        );
+        inspectorState = InspectorState.THINKING;
+        stateTimer = 40;
     }
 
     private DamageSource createTooHonestDamageSource(ServerWorld world) {
@@ -249,6 +254,13 @@ public class FakeTicketInspectorEntity extends VillagerEntity {
         if (!isTargetValid()) {
             stolenTicket = ItemStack.EMPTY;
             stolenTicketIsFake = false;
+            playerClaimedRealTicketWasFake = false;
+            return;
+        }
+
+        if (playerClaimedRealTicketWasFake) {
+            confiscateTicketAndWarn();
+            playerClaimedRealTicketWasFake = false;
             return;
         }
 
@@ -260,10 +272,23 @@ public class FakeTicketInspectorEntity extends VillagerEntity {
             );
             stolenTicket = ItemStack.EMPTY;
             stolenTicketIsFake = false;
+            playerClaimedRealTicketWasFake = false;
             return;
         }
 
         returnTicket();
+    }
+
+    private void confiscateTicketAndWarn() {
+        if (targetPlayer != null) {
+            targetPlayer.sendMessage(
+                    Text.translatable("dialogue.boundless_realms.inspector.warning"),
+                    false
+            );
+        }
+
+        stolenTicket = ItemStack.EMPTY;
+        stolenTicketIsFake = false;
     }
 
     private void returnTicket() {
@@ -328,6 +353,7 @@ public class FakeTicketInspectorEntity extends VillagerEntity {
         targetPlayer = null;
         stolenTicket = ItemStack.EMPTY;
         stolenTicketIsFake = false;
+        playerClaimedRealTicketWasFake = false;
         stateTimer = 0;
     }
 
@@ -371,4 +397,3 @@ public class FakeTicketInspectorEntity extends VillagerEntity {
         return ItemStack.EMPTY;
     }
 }
-

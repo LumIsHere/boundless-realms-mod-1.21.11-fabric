@@ -32,8 +32,10 @@
   "dialogue.boundless_realms.inspector.answer_yes": "[是]",
   "dialogue.boundless_realms.inspector.answer_no": "[不是]",
   "dialogue.boundless_realms.inspector.honest": "真是个诚实的孩子。",
+  "dialogue.boundless_realms.inspector.self_doubt": "等等……难道是我看错了？让我再想想。",
   "dialogue.boundless_realms.inspector.thinking": "嗯...",
   "dialogue.boundless_realms.inspector.return": "看起来是真的。拿回去吧。",
   "dialogue.boundless_realms.inspector.fake": "这是张假票。你的血量被扣到只剩半颗心。",
+  "dialogue.boundless_realms.inspector.warning": "这次先没收你的餐券，给你一次警告。",
   "dialogue.boundless_realms.inspector.no_ticket": "嘿，你的午餐券呢？"
 }

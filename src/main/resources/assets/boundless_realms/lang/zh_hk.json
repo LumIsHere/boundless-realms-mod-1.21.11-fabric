@@ -32,8 +32,10 @@
   "dialogue.boundless_realms.inspector.answer_yes": "[係]",
   "dialogue.boundless_realms.inspector.answer_no": "[唔係]",
   "dialogue.boundless_realms.inspector.honest": "真係個誠實嘅細路。",
+  "dialogue.boundless_realms.inspector.self_doubt": "等等……唔通係我睇錯咗？等我再諗一陣。",
   "dialogue.boundless_realms.inspector.thinking": "唔...",
   "dialogue.boundless_realms.inspector.return": "睇落係真嘅。攞返去啦。",
   "dialogue.boundless_realms.inspector.fake": "呢張係假飛。你嘅血量被扣到淨返半粒心。",
+  "dialogue.boundless_realms.inspector.warning": "今次先沒收你張餐券，警告你一次。",
   "dialogue.boundless_realms.inspector.no_ticket": "喂，你張午餐券去咗邊？"
 }
