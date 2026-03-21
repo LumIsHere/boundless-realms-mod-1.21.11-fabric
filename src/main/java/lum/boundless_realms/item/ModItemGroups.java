@@ -13,9 +13,10 @@ import net.minecraft.util.Identifier;
 public class ModItemGroups {
     public static final ItemGroup BOUNDLESS_REALMS_GENERAL_GROUP = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(BoundlessRealmsMod.MOD_ID, "boundless_realms_general"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.AN_ITEM))
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.RUBY))
                     .displayName(Text.translatable("itemgroup.boundless_realms.boundless_realms_general"))
                     .entries((displayContext, entries) -> {
+                        entries.add(ModItems.RUBY);
                         entries.add(ModItems.MONEY);
                         entries.add(ModItems.TAIGA_ONE_SURVIVAL_MACHETE);
                         entries.add(ModItems.WITHER_FURY);

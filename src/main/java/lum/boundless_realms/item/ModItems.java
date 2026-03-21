@@ -29,6 +29,7 @@ import java.util.function.Function;
 public class ModItems {
 
     public static final Item AN_ITEM = register("an_item", Item::new, new Item.Settings());
+    public static final Item RUBY = register("ruby", Item::new, new Item.Settings());
     public static final Item FAKE_LUNCH_TICKET = register("fake_lunch_ticket", Item::new, new Item.Settings().maxCount(1));
     public static final Item MONEY = register("money", Item::new, new Item.Settings().maxCount(99));
     public static final Item LUNCH_TICKET = register("lunch_ticket", LunchTicketItem::new, new Item.Settings().maxCount(1));
@@ -52,8 +53,7 @@ public class ModItems {
     public static final Item AFAK_MED_KIT = register(
             "afak_med_kit",
             settings -> new MedKitItem(settings, 10.0f, 40),
-            new Item.Settings()
-    );
+            new Item.Settings());
 
     public static <T extends Item> T register(String name, Function<Item.Settings, T> itemFactory, Item.Settings settings) {
         Identifier id = Identifier.of(BoundlessRealmsMod.MOD_ID, name);
