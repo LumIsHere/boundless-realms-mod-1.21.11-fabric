@@ -1,0 +1,43 @@
+{
+  "block.boundless_realms.nether_furnace": "Horno del Nether",
+  "container.nether_furnace": "Horno del Nether",
+
+  "item.boundless_realms.taiga_1_survival_machete": "Machete de supervivencia Taiga-1",
+  "item.boundless_realms.wither_fury": "Furia del Wither",
+  "item.boundless_realms.backstab_totem": "Tótem de puñalada por la espalda",
+  "item.boundless_realms.anglerfish_mask": "Máscara de pez rape",
+  "item.boundless_realms.portable_crafting_table": "Mesa de trabajo portátil",
+  "item.boundless_realms.lunch_ticket": "Ticket de almuerzo",
+  "item.boundless_realms.fake_lunch_ticket": "Ticket de almuerzo falso",
+  "item.boundless_realms.money": "Dinero",
+  "item.boundless_realms.nether_furnace_upgrade_template": "Plantilla de mejora del horno del Nether",
+  "item.boundless_realms.wallet": "Cartera",
+  "item.boundless_realms.nether_furnace": "Horno del Nether",
+  "item.boundless_realms.ticket_inspector_spawn_egg": "Huevo generador de inspector",
+  "item.boundless_realms.afak_med_kit": "Botiquín AFAK",
+  "item.boundless_realms.ruby": "Rubí",
+
+  "notification.lunch_ticket.no_enough_money": "¡Necesitas %s de dinero para usarlo!",
+
+  "itemgroup.boundless_realms.boundless_realms_general": "Boundless Realms",
+  "itemgroup.boundless_realms.boundless_realms_medical_supplies": "Suministros médicos",
+
+  "notification_no_target_backstab_totem": "No se encontró ningún jugador en un radio de 5000 bloques",
+  "teleported_to_target_backstab_totem": "¡Teletransportado detrás de %s!",
+  "not_enough_money": "¡No tienes suficiente dinero!",
+  "spent_money": "Has gastado %s de dinero.",
+  "death.too_honest": "Fuiste asesinado por ser demasiado honesto",
+  "death.attack.too_honest": "Fuiste asesinado por ser demasiado honesto",
+  "entity.boundless_realms.ticket_inspector": "Inspector",
+
+  "dialogue.boundless_realms.inspector.question": "¿Es un ticket falso?",
+  "dialogue.boundless_realms.inspector.answer_yes": "[Sí]",
+  "dialogue.boundless_realms.inspector.answer_no": "[No]",
+  "dialogue.boundless_realms.inspector.honest": "Qué niño tan honesto.",
+  "dialogue.boundless_realms.inspector.self_doubt": "Espera... ¿me equivoqué? Déjame pensar un momento.",
+  "dialogue.boundless_realms.inspector.thinking": "Hmm...",
+  "dialogue.boundless_realms.inspector.return": "Parece real. Tómalo de vuelta.",
+  "dialogue.boundless_realms.inspector.fake": "Este es un ticket falso. Tu salud se ha reducido a medio corazón.",
+  "dialogue.boundless_realms.inspector.warning": "Esta vez confiscaré tu ticket. Considéralo una advertencia.",
+  "dialogue.boundless_realms.inspector.no_ticket": "Oye, ¿dónde está tu ticket de almuerzo?"
+}
