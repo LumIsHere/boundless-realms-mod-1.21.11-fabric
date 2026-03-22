@@ -19,6 +19,7 @@ public class ModItemGroups {
                         entries.add(ModItems.RUBY);
                         entries.add(ModItems.MONEY);
                         entries.add(ModItems.TAIGA_ONE_SURVIVAL_MACHETE);
+                        entries.add(ModItems.BEDROCK_GAUNTLET);
                         entries.add(ModItems.WITHER_FURY);
                         entries.add(ModItems.BACKSTAB_TOTEM);
                         entries.add(ModItems.ANGLERFISH_MASK);
@@ -45,4 +46,3 @@ public class ModItemGroups {
         BoundlessRealmsMod.LOGGER.info("Registering item groups for " + BoundlessRealmsMod.MOD_ID);
     }
 }
-

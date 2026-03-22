@@ -34,6 +34,13 @@ public class ModItems {
     public static final Item MONEY = register("money", Item::new, new Item.Settings().maxCount(99));
     public static final Item LUNCH_TICKET = register("lunch_ticket", LunchTicketItem::new, new Item.Settings().maxCount(1));
     public static final Item BACKSTAB_TOTEM = register("backstab_totem", BackstabTotemItem::new, new Item.Settings().maxCount(1));
+    public static final Item BEDROCK_GAUNTLET = register(
+            "bedrock_gauntlet",
+            BedrockGauntletItem::new,
+            new Item.Settings()
+                    .maxCount(1)
+                    .attributeModifiers(createBedrockGauntletAttributes())
+    );
     public static final Item WITHER_FURY = register("wither_fury", WitherFuryItem::new,
             new Item.Settings().sword(ToolMaterial.DIAMOND, 3f, -2.4f));
     public static final Item TAIGA_ONE_SURVIVAL_MACHETE = register("taiga_1_survival_machete", Item::new,
@@ -60,6 +67,32 @@ public class ModItems {
         RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, id);
         T item = itemFactory.apply(settings.registryKey(key));
         return Registry.register(Registries.ITEM, key, item);
+    }
+
+    private static AttributeModifiersComponent createBedrockGauntletAttributes() {
+        // Bedrock-style punching is much faster than Java's default attack cooldown system.
+        // We give the gauntlet an extremely large attack speed bonus so its cooldown is
+        // effectively gone while the item is held in the main hand.
+        return AttributeModifiersComponent.builder()
+                .add(
+                        EntityAttributes.ATTACK_DAMAGE,
+                        new EntityAttributeModifier(
+                                Identifier.of(BoundlessRealmsMod.MOD_ID, "bedrock_gauntlet_attack_damage"),
+                                3.0,
+                                EntityAttributeModifier.Operation.ADD_VALUE
+                        ),
+                        AttributeModifierSlot.MAINHAND
+                )
+                .add(
+                        EntityAttributes.ATTACK_SPEED,
+                        new EntityAttributeModifier(
+                                Identifier.of(BoundlessRealmsMod.MOD_ID, "bedrock_gauntlet_attack_speed"),
+                                1020.0,
+                                EntityAttributeModifier.Operation.ADD_VALUE
+                        ),
+                        AttributeModifierSlot.MAINHAND
+                )
+                .build();
     }
 
     public static void registerModItems() {
